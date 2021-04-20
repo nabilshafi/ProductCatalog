@@ -9,7 +9,6 @@ import lombok.Data;
 
 
 @Data
-@AllArgsConstructor
 @Embeddable
 public class Attributes {
 
@@ -19,9 +18,15 @@ public class Attributes {
     private String brand;
     private String os;
 
+    public Attributes(Long id, float size, String brand, String os) {
+        this.id = id;
+        this.size = size;
+        this.brand = brand;
+        this.os = os;
+    }
 
 
-    public Attributes() {}
+    public Attributes() {
 
-
+    }
 }
